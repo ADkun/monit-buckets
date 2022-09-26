@@ -1,7 +1,0 @@
-#! /bin/bash
-
-procName=$1
-
-sed -i -e "/${procName}/d" /etc/monitrc
-yes | rm -f /pid/${procName}.pid
-monit reload

@@ -1,9 +1,0 @@
-#! /bin/bash
-
-procName=$1
-pid=$2
-
-mkdir /pid 2>/dev/null
-echo "${pid}" > /pid/${procName}.pid
-echo "check process ${procName} with pidfile /pid/${procName}.pid" >> /etc/monitrc
-monit reload
