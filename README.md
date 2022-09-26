@@ -8,6 +8,13 @@ amonit [进程名的一部分/pid]
 将ps -ef下所有符合该进程名（或PID）的进程进入到monit监控中。
 注：不支持正则表达式
 
+# damonit
+用法：
+```bash
+damonit
+```
+取消监控所有进程
+
 # dmonit
 用法：
 ```bash
