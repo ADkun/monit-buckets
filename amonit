@@ -57,7 +57,7 @@ mkdir ${pid_dir} 2>/dev/null
 c=1
 for line in $(echo ${proc_pid_list}); do
     pid=${line}
-    proc_name=$(echo "${proc_name_list}" | sed -n "${c}p")${c}
+    proc_name=$(basename $(echo "${proc_name_list}" | sed -n "${c}p")${c})
 
     echo "${pid}" > ${pid_dir}/${proc_name}.pid
     echo "check process ${proc_name} with pidfile ${pid_dir}/${proc_name}.pid" >> ~/.monitrc
