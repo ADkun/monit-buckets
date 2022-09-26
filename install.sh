@@ -23,6 +23,7 @@ GetArchitecture(){
 GetArchitecture
 
 Main(){
+    Exec "sudo chown -R ${USER}:${USER} ${script_path}/"
     Exec "sudo chmod a+x ${script_path}/*monit"
     Exec "sudo cp -p ${script_path}/*monit /usr/local/bin"
 
